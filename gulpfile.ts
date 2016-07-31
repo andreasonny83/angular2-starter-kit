@@ -40,7 +40,7 @@ gulp.task('start:server', () => {
   browserSync.init({
     server: {
       baseDir: './build/',
-      https: true,
+      https: false,
       open: false,
       middleware: [
         fallback({
@@ -77,16 +77,16 @@ gulp.task('resources', () =>
  */
 gulp.task('libs', () =>
     gulp.src([
-            'es6-shim/es6-shim.min.js',
-            'systemjs/dist/system-polyfills.js',
-            'systemjs/dist/system.src.js',
-            'reflect-metadata/Reflect.js',
-            'rxjs/**',
-            'zone.js/dist/**',
-            '@angular/**',
-            'angular2-in-memory-web-api',
-        ], {cwd: 'node_modules/**'}) /* Glob required here. */
-        .pipe(gulp.dest('build/lib')));
+        'es6-shim/es6-shim.min.js',
+        'systemjs/dist/system-polyfills.js',
+        'systemjs/dist/system.src.js',
+        'reflect-metadata/Reflect.js',
+        'rxjs/**',
+        'zone.js/dist/**',
+        '@angular/**',
+        'angular2-in-memory-web-api',
+      ], {cwd: 'node_modules/**'}) /* Glob required here. */
+      .pipe(gulp.dest('build/lib')));
 
 /**
  * Watch for changes in TypeScript, HTML and CSS files.

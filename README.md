@@ -35,14 +35,14 @@ npm install
 
 `node_modules` and `typings` directories should be created during the install.
 
-Build the project:
+## Development
 
 ```sh
-npm run start
+npm start
 ```
 
-A new `build` directory should be created during the build process and
-your browser should opens pointing to your compiled project
+A new `build` directory should be created from where serving the rendered app,
+then your browser should opens pointing to your compiled project
 
 ## Contributing
 
